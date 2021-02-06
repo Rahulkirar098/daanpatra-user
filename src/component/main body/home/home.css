@@ -1,0 +1,13 @@
+.background{
+    width: 100%;
+    height: 80vh;
+    background-color: #ffd400; 
+}
+
+@media screen and (max-width: 768px){
+.background{
+    width: 100%;
+    height: 100%;
+}
+}
+

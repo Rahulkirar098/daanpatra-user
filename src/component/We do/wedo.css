@@ -1,0 +1,42 @@
+.wedo{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.wedo-text{
+    width: 70%;
+}
+.wedo-text span{
+    color: yellow;
+}
+.wedo-text p{
+    margin-top: 1%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.wedo-img{
+    width: 50%;
+    height: 100%;
+}
+.wedo-img img{
+    width: 70%;
+    margin-left: 5%;
+}
+@media screen and (max-width: 768px){
+    .wedo{
+        display: block;
+    }
+    .wedo-text{
+        width: 100%;
+    } 
+    .wedo-text p{
+        font-size: 1rem;
+    }
+    .wedo-img{
+        width: 100%;
+        margin-top: 5%;
+    }
+    .wedo-img img{
+        width: 100%;
+    }
+}

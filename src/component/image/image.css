@@ -1,0 +1,23 @@
+.image{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f2f1f1;
+    margin-top: 10%;
+}
+.image img{
+    width: 250px;
+    height: 200px;
+    transition: 1s;
+    margin: 5px;
+}
+.image img:hover{
+    transform: scale(1.3);
+    z-index: 1;
+}
+@media screen and (max-width: 768px){
+    .image{
+        display: none;
+    }
+}
