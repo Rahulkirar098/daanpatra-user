@@ -13,7 +13,8 @@ nav {
 	font-family: 'Open Sans', sans-serif;
 	padding: 0 5%;
 	height: 15vh;
-	background-color: #ffd400;
+	/* background-color: #ffd400; */
+	background-image: url(../../assect/4.jpg);
 	position: fixed;
 	/* background-color: white;
 	border-radius: 50px; */

@@ -14,6 +14,7 @@ import Error from "./component/Error/Error";
 import Login from "./component/login/Login";
 import Signup from "./component/signup/Signup";
 import Gallery from "./component/news gallary/Gallery"
+import Scroll from "./component/Scroll";
 
 
 
@@ -61,7 +62,8 @@ function App() {
       <Image />
       <Image />*/}
 
-       <Footer />   
+       <Footer />  
+       <Scroll /> 
 
 
 

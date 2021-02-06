@@ -1,7 +1,9 @@
 .background{
     width: 100%;
     height: 80vh;
-    background-color: #ffd400; 
+    /* background-color: #ffd400;  */
+    background-image: url(../../../assect/4.jpg);
+
 }
 
 @media screen and (max-width: 768px){
