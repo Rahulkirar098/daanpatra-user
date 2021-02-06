@@ -20,7 +20,7 @@ const Head = () => {
 
             <header>
 
-                <nav>
+                <nav className="nav">
                     <input id="nav-toggle" type="checkbox" />
                     <Bounce top>
                    <Link to="/"> <a href="#home"><img className="logo" src={logo} alt="logo" /></a></Link>
@@ -30,7 +30,7 @@ const Head = () => {
                         <li><NavLink exact activeClassName="active" to="/"><a href="#home">Home</a></NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/weare"><a href="#weare">We Are</a></NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/whatwedo"><a href="#wedo">We Do</a></NavLink></li>
-                        <li><NavLink exact activeClassName="active" to="/Image"><a href="#gallery">Gallery</a></NavLink></li>
+                        <li><NavLink exact activeClassName="active" to="/gallery"><a href="#gallery">Gallery</a></NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li> 
                         <li><NavLink exact activeClassName="active" to="/login">Donate</NavLink></li>
                         

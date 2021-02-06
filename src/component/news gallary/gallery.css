@@ -1,8 +1,5 @@
 .news-gallary{
-    width: 90%;
-    margin: auto;
-    border-top: 5px solid yellow;
-    border-bottom: 5px solid yellow;
+    margin-top: 7%;
 }
 /* .gallery-btn{
     border-radius: 4px;
@@ -57,7 +54,8 @@
   }
 @media (max-width: 768px){
     .news-gallary{
-        width: 100%;
+        width: 90%;
+        margin: auto;
     }
     .gallery-btn{
         margin-left: 20%;

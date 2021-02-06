@@ -15,6 +15,7 @@ import Login from "./component/login/Login";
 import Signup from "./component/signup/Signup";
 import Gallery from "./component/news gallary/Gallery"
 import Scroll from "./component/Scroll";
+import Index from "./Dashbord/Index";
 
 
 
@@ -32,7 +33,7 @@ function App() {
   return (
     <>
 
-
+{/* 
     <Navbar />
     
    
@@ -47,9 +48,10 @@ function App() {
         <Route exact path='/contact' component={Contact} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/signup' component={Signup} />
+        <Route exact path='/gallery' component={Gallery} />
         <Route component={Error} />
         
-      </Switch>
+      </Switch> */}
 
       
 
@@ -61,10 +63,10 @@ function App() {
       <News />
       <Image />
       <Image />*/}
-
+{/* 
        <Footer />  
-       <Scroll /> 
-
+       <Scroll /> */}
+       <Index /> 
 
 
       {/* <WeDo /> */}
