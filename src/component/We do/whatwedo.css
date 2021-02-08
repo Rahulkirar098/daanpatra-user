@@ -54,8 +54,10 @@
 }
 @media screen and (max-width: 768px){
     .whatwedo{
-        width: 100%;
+        width: 90%;
+        margin: auto;
         height: 100%;
+        margin-top: 17%;
     }
     .wedo-p{
         width: 100%;

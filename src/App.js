@@ -7,7 +7,6 @@ import Contact from "./component/main body/contact/contact";
 import Weare from "./component/main body/weare/Weare";
 import News from "./component/main body/news/News";
 import Image from "./component/image/Image";
-import ContactButton from "./component/main body/contact/ContactButton";
 import WhatWeDo from "./component/We do/Whatwedo";
 import Navbar from "./component/navbar/Navbar";
 import Error from "./component/Error/Error";
@@ -15,15 +14,8 @@ import Login from "./component/login/Login";
 import Signup from "./component/signup/Signup";
 import Gallery from "./component/news gallary/Gallery"
 import Scroll from "./component/Scroll";
-import Index from "./Dashbord/Index";
-
-
-
-// import Gallery from "./component/news gallary/Gallery";
-// import WeDo from "./component/We do/WeDo";
-// import Login from "./component/login/Login";
-// import Feedus from "./component/main body/feedus/Feedus";
-
+import Social from './component/social';
+import Whatsapp from './component/Whatsaap';
 
 
 
@@ -33,10 +25,9 @@ function App() {
   return (
     <>
 
-{/* 
-    <Navbar />
-    
-   
+      <Navbar />
+
+
 
       <Switch>
 
@@ -50,29 +41,18 @@ function App() {
         <Route exact path='/signup' component={Signup} />
         <Route exact path='/gallery' component={Gallery} />
         <Route component={Error} />
-        
-      </Switch> */}
 
+      </Switch>
+
+      <Footer />
+
+      <Scroll />
       
+      <Social />
 
-      
-
-      {/* <WhatWeDo />
-      <Weare />
-      <ContactButton />
-      <News />
-      <Image />
-      <Image />*/}
-{/* 
-       <Footer />  
-       <Scroll /> */}
-       <Index /> 
+      <Whatsapp />
 
 
-      {/* <WeDo /> */}
-      {/* <Gallery /> */}
-      {/* <Login /> */}
-      {/* <Feedus /> */}
 
 
     </>

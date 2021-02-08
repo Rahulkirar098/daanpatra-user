@@ -7,12 +7,12 @@
 }
 .contact-button h1{
     margin-top: 50px;
-    margin-left: 700px;
+    margin-left: 300px;
     font-size: 1.5rem;
 }
 .button {
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: #fabd3a;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -23,6 +23,7 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 30px 0 0 20px;
+    border-radius: 50px 0 50px 0;
   }
   
   .button span {
@@ -42,11 +43,13 @@
   }
   .button:hover span {
     padding-right: 25px;
+    border: none;
   }
   
   .button:hover span:after {
     opacity: 1;
     right: 0;
+    border: none;
   }
   @media screen and (max-width: 768px){
     .button-responsive{

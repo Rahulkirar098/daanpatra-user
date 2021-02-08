@@ -13,14 +13,15 @@ const Scroll = () => {
             setVisiblity(false);
         }
     }, [pageYOffset]);
+    if (!visible) {
+        return false;
+    }
 
     const scrollTotop = () =>{
         window.scrollTo({ top:0, behavior: "smooth" })
     }
 
-    if (!visible) {
-        return false;
-    }
+    
 
     return (
         <>

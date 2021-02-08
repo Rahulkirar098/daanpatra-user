@@ -93,9 +93,9 @@
 		z-index: 100;
 		left: 0;
 		right: 0;
-		top: 60px;
+		top: 55px;
 		bottom: 100%;
-		width: auto;
+		width: 100%;
 		height: auto;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -115,7 +115,7 @@
 		display: block;
 		position: absolute;
 		top: 30px;
-		right: 0px;
+		right: s0px;
 	}
 	.nav :checked ~ .icon-burger .line:nth-child(1) {
 		transform: translateY(10px) rotate(225deg);
