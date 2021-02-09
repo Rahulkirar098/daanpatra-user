@@ -4,21 +4,21 @@
 	flex-wrap: wrap;
 	width: 90%;
 	margin: auto;
-	/* background-color: blue; */
-	
-	
+	padding-top: 5%;	
+	padding-bottom: 3%;
 }
 .ul{
 	list-style: none;
 }
 .footer{
 	/* background-color: #24262b; */
-background-image: url(../../assect/back.jpg);
+	background-image: url(../../assect/kid1.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
 	width: 100%;
+	/* background-image:  rgba(0,0,0,0.5); */
 	
 }
 .footer-col{

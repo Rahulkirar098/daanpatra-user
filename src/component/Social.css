@@ -66,10 +66,8 @@
   }
   
   .twitter:hover {
-    background-color: #4099FF;
+    background-color: blue;
   }
-  
-
   
   .linkedin p i {
     left: 20px;
@@ -84,7 +82,7 @@
   }
   
   .linkedin:hover {
-    background-color: #0976B4;
+    background-color: rgb(247,119,55);
   }
 
   @media screen and (max-width: 768px){
