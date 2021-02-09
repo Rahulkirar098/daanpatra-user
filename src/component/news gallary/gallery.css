@@ -1,65 +1,58 @@
 .news-gallary{
-    width: 90%;
-    margin: auto;
-    border-top: 5px solid yellow;
-    border-bottom: 5px solid yellow;
+    margin-top: 7%;
 }
-/* .gallery-btn{
-    border-radius: 4px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
 
-} */
-.gallery-btn{
-    background:yellow;
-    color:#000;
-    border:none;
-    position:relative;
-    height:60px;
-    font-size:1.6em;
-    padding:0 2em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-    margin-left: 10%;
-    margin-bottom: 2%;
-  }
-  .gallery-btn:hover{
-    background:#fff;
-    color: orange;
-  }
-  .gallery-btn:before,.gallery-btn:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: #000;
-    transition:400ms ease all;
-  }
-  .gallery-btn:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .gallery-btn:hover:before,.gallery-btn:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
 @media (max-width: 768px){
     .news-gallary{
-        width: 100%;
+        width: 90%;
+        margin: auto;
+        margin-top: 18%;
     }
-    .gallery-btn{
-        margin-left: 20%;
-    }
+}
+.GalleryHome{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+.GalleryHome img{
+    width: 500px;
+    height: 400px;
+    -webkit-filter: blur(5px);
+    border-radius: 50px;
+}
+.GalleryHome img:hover{
+    -webkit-filter: blur(0px);
+}
+.GH-left{
+    width: 50%;
+    padding: 50px;
+    position: relative;
+}
+ .h1{
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50% ,-50%);
+    text-shadow: 5px 5px #000;
+    color: #fff;
+
+}
+
+.GH-right{
+    width: 50%;
+    padding: 50px;
+    /* border: 2px solid blue; */
+    position: relative;
+}
+.GH-right h1{
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-shadow: 5px 5px #000;
+    color: #fff;
 }

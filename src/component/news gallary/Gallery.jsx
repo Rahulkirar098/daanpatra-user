@@ -7,7 +7,6 @@ import Fade from 'react-reveal/Fade';
 
 function Stuck() {
 
-  const [show, setShow] = useState(false);
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -26,16 +25,20 @@ function Stuck() {
 
   return (
     <>
-        <button className="gallery-btn" onClick={()=>{
+        {/* <button className="gallery-btn" onClick={()=>{
           setShow(!show)
         }}>Press</button>
         {
           show?<Fade top><div className="news-gallary">
 
-<Gallery photos={photos} onClick={openLightbox} />
+
+</div></Fade>:null
+        } */}
+<div className="news-gallary">
+        <Gallery photos={photos} onClick={openLightbox}  />
 <ModalGateway >
   {viewerIsOpen ? (
-    <Modal onClose={closeLightbox}>
+    <Modal onClose={closeLightbox} >
       <Carousel
         currentIndex={currentImage}
         views={photos.map(x => ({
@@ -47,10 +50,7 @@ function Stuck() {
     </Modal>
   ) : null}
 </ModalGateway>
-</div></Fade>:null
-        }
-
-    
+    </div>
     </>
   );
 }
