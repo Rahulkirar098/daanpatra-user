@@ -69,12 +69,12 @@ background-image: url(../../assect/back.jpg);
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
-	color: #000;
+	color: #fff;
 	transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #000;
+	color: #000;
+	background-color: #fff;
 }
 
 /*responsive*/

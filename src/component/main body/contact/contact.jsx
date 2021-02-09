@@ -11,7 +11,7 @@ const Contact = () => {
 
           <section id="contact-section" id="contact">
 
-           <div className="container">
+           <div className="containers">
            <Zoom>
            <h2>Contact Us</h2></Zoom>
          

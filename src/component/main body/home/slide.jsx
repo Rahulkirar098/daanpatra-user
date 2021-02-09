@@ -12,7 +12,7 @@ export default () => (
     <div className="carouselcss" >
     <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} dynamicHeight={false}>
         <div >
-            <img className="carousel_img" alt="" src={slide1} />
+            <img className="carousel_img" alt="" src={slide3} />
             {/* <Slide bottom><p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p></Slide> */}
         </div>
         <div >
@@ -20,7 +20,7 @@ export default () => (
             {/* <p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p> */}
         </div>
         <div >
-            <img className="carousel_img" alt="" src={slide3} />
+            <img className="carousel_img" alt="" src={slide1} />
             {/* <p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p> */}
         </div>
         <div >

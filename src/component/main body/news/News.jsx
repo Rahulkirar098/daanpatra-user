@@ -18,7 +18,7 @@ const News = () => {
 
                 <div className="img-div">
 
-                    <video controls autoPlay="false">
+                    <video controls>
                         <source src={BBC} />
                     </video>
 
