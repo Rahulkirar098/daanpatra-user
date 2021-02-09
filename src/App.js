@@ -13,9 +13,11 @@ import Error from "./component/Error/Error";
 import Login from "./component/login/Login";
 import Signup from "./component/signup/Signup";
 import Gallery from "./component/news gallary/Gallery"
+import GalleryHome from "./component/news gallary/topart";
 import Scroll from "./component/Scroll";
 import Social from './component/social';
 import Whatsapp from './component/Whatsaap';
+import Dashbord from './Dashbord/DashbordHome'
 
 
 
@@ -40,6 +42,7 @@ function App() {
         <Route exact path='/login' component={Login} />
         <Route exact path='/signup' component={Signup} />
         <Route exact path='/gallery' component={Gallery} />
+        <Route exact path='/galleryhome' component={GalleryHome} />
         <Route component={Error} />
 
       </Switch>
@@ -47,11 +50,12 @@ function App() {
       <Footer />
 
       <Scroll />
-      
+
       <Social />
 
-      <Whatsapp />
+      <Whatsapp /> 
 
+{/* <Dashbord /> */}
 
 
 

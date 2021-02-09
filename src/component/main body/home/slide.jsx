@@ -23,14 +23,12 @@ export default () => (
             <img className="carousel_img" alt="" src={slide3} />
             {/* <p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p> */}
         </div>
-        {/* <div >
+        <div >
             <img className="carousel_img" alt="" src={slide4} />
-            <p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p>
         </div>
         <div >
             <img className="carousel_img" alt="" src={slide5} />
-            <p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p>
-        </div> */}
+        </div>
         
     </Carousel>
     </div>

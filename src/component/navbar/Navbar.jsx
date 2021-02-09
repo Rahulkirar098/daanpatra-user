@@ -30,9 +30,11 @@ const Head = () => {
                         <li><NavLink exact activeClassName="active" to="/"><a href="#home">Home</a></NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/weare"><a href="#weare">We Are</a></NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/whatwedo"><a href="#wedo">We Do</a></NavLink></li>
-                        <li><NavLink exact activeClassName="active" to="/gallery"><a href="#gallery">Gallery</a></NavLink></li>
+                        <li><NavLink exact activeClassName="active" to="/galleryhome"><a href="#gallery">Gallery</a></NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li> 
                         <li><NavLink exact activeClassName="active" to="/login">Donate</NavLink></li>
+                        
+                        <li><NavLink exact activeClassName="active" to="/login">volunteer</NavLink></li>
                         
                     </ul>
                     </Slide>

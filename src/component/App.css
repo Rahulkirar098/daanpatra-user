@@ -5,8 +5,8 @@
     width: 60px;
     height: 60px;
     border-radius: 100%;
-    background-color: chartreuse;
-    color: #fff;
+    background-color: rgba(128, 128, 128, 0.73);
+    color: black;
     z-index: 2;
 }
 .scroll .icon{
@@ -14,6 +14,9 @@
     margin-top: 5px;
     margin-left: 10px;
     animation: scrolltop 0.5s alternate ease infinite;
+}
+.fa-chevron-up{
+    color: black;
 }
 @keyframes scrolltop{
     from{

@@ -7,7 +7,7 @@ const Footer = () => {
   	 	<div class="row">
   	 		<div class="footer-col">
   	 			<h4>About us</h4>
-  	 			<ul>
+  	 			<ul className="ul">
   	 				<li><a href="#">We Are</a></li>
   	 				<li><a href="#">We Do</a></li>
   	 				<li><a href="#">Gallery</a></li>
@@ -18,7 +18,7 @@ const Footer = () => {
   	 	 
   	 		<div class="footer-col">
   	 			<h4>Address</h4>
-  	 			<ul>
+  	 			<ul className="ul">
   	 				<li><a><i class="far fa-phone"></i>.  .6263362660, 7828383066 </a></li>
   	 				<li><a><i class="fad fa-envelope-square"></i>. .DAANPATRA18@GMAIL.COM </a></li>
   	 				{/* <li><a ><i class="far fa-map-marker-alt"></i>. .AVWEB World Pvt Ltd, 477, Ranjeet Hanuman Rd, Sector D, Sudama Nagar, Indore</a></li> */}
@@ -26,7 +26,7 @@ const Footer = () => {
   	 		</div>
                <div class="footer-col">
   	 			<h4>App </h4>
-  	 			<ul>
+  	 			<ul className="ul">
   	 				<li><a href="#"><i class="fab fa-app-store-ios"></i> Apple store</a></li>
   	 				<li><a href="#"><i class="fab fa-google-play"></i> play store</a></li>
 

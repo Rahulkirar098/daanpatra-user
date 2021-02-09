@@ -13,7 +13,8 @@ const Whatsaap = () =>{
         } else {
             setVisiblity(false);
         }
-    }, [pageYOffset] );
+    }, 
+    [pageYOffset] );
     if (!visible) {
         return false;
     }

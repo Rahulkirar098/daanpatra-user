@@ -14,10 +14,14 @@
 	padding: 0 5%;
 	height: 15vh;
 	/* background-color: #ffd400; */
-	background-image: url(../../assect/4.jpg);
+	background-image: url(../../assect/Vector.jpg);
 	position: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	/* background-color: white;
 	border-radius: 50px; */
+	/* opacity: 0.5; */
 }
 .nav .logo{
 	margin-top: 10px;
