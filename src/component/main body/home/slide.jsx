@@ -6,7 +6,6 @@ import slide2 from "../../../assect/slide2.jpg";
 import slide3 from "../../../assect/slide3.jpg";
 import slide4 from "../../../assect/slide4.jpg";
 import slide5 from "../../../assect/slide5.jpg";
-import Slide from 'react-reveal/Slide';
 
 export default () => (
     <div className="carouselcss" >

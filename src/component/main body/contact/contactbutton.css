@@ -1,7 +1,19 @@
 .contact-button{
     height: 20vh;
-    background-color: #9e999c;
+    background-image: url(../../../assect/back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;  
 }
+.contact-div1{
+  opacity: 0.7;
+  height: 100%;
+ }
+ .contact-div2{
+  background-color : black;
+  height:100%;
+ }
 .button-responsive{
     display: flex;
 }
@@ -11,7 +23,6 @@
     font-size: 1.5rem;
 }
 .button {
-    border-radius: 4px;
     background-color: #fabd3a;
     border: none;
     color: #FFFFFF;
@@ -22,10 +33,12 @@
     height: 80px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 30px 0 0 20px;
-    border-radius: 50px 0 50px 0;
+    margin: 20px 0 0 20px;
+    border-radius: 50px 10px 50px 10px;
   }
-  
+  .button span link{
+    color: black;
+  }
   .button span {
     cursor: pointer;
     display: inline-block;
@@ -69,3 +82,4 @@
         padding: 2px;
     }
  }
+ 

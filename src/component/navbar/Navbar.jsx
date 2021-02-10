@@ -2,7 +2,6 @@ import React from "react";
 import "./navbar.css"
 import {Link} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
-
 import logo from "../../assect/logo11.png";
 import Bounce from 'react-reveal/Bounce';
 import Slide from 'react-reveal/Slide';
@@ -23,17 +22,17 @@ const Head = () => {
                 <nav className="nav">
                     <input id="nav-toggle" type="checkbox" />
                     <Bounce top>
-                   <Link to="/"> <a href="#home"><img className="logo" src={logo} alt="logo" /></a></Link>
+                   <Link to="/"> <img className="logo" src={logo} alt="logo" /></Link>
                     </Bounce>
                         <Slide right>
                     <ul className="links">
-                        <li><NavLink exact activeClassName="active" to="/"><a href="#home">Home</a></NavLink></li>
-                        <li><NavLink exact activeClassName="active" to="/weare"><a href="#weare">We Are</a></NavLink></li>
-                        <li><NavLink exact activeClassName="active" to="/whatwedo"><a href="#wedo">We Do</a></NavLink></li>
-                        <li><NavLink exact activeClassName="active" to="/galleryhome"><a href="#gallery">Gallery</a></NavLink></li>
+                        <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
+                        <li><NavLink exact activeClassName="active" to="/weare">We Are</NavLink></li>
+                        <li><NavLink exact activeClassName="active" to="/whatwedo">We Do</NavLink></li>
+                        <li ><NavLink exact activeClassName="active" to="/galleryhome">Gallery</NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li> 
                         <li><NavLink exact activeClassName="active" to="/login">Donate</NavLink></li>
-                        <li><NavLink exact activeClassName="active" to="/rahul">Volunteer</NavLink></li>
+                        <li><NavLink exact activeClassName="active" to="/faq">Volunteer</NavLink></li>
                         
                     </ul>
                     </Slide>

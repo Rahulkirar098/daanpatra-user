@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Gallery from "../../assect/good.jpeg";
-import Press from '../../assect/wheet.jpg'
+import Gallery from "../../assect/gallery.png";
+import Press from '../../assect/Press.jpg'
 import './gallery.css'
 
 const GalleryHome = () =>{
@@ -11,13 +11,13 @@ const GalleryHome = () =>{
         <div className="GalleryHome">
 
             <div className="GH-left">
-                       <img src={Gallery}></img>
-                       <Link to="/gallery"> <h1 className="h1">Gallery</h1></Link>
+                       
+                       <Link to="/gallery"> <h1 className="h1"><img src={Gallery}></img></h1></Link>
             </div>
 
             <div className="GH-right">
-                      <img src={Press}></img>
-                      <Link to="/gallery"><h1 className="h1">Press Media</h1></Link>
+                      
+                      <Link to="/gallery"><h1 className="h1"><img src={Press}></img></h1></Link>
             </div>
         </div>
     )

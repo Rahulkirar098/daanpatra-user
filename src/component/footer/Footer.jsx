@@ -18,15 +18,16 @@ const Footer = () => {
 								<li><Link to="/whatwedo">We Do</Link></li>
 								<li><Link to="/galleryhome">Gallery</Link></li>
 								<li><Link to="/contact">Contact</Link></li>
-								<li><Link to="/login">Donate</Link></li>
+								<li><Link to="/faq">FAQ</Link></li>
 							</ul>
 						</div>
+						
 
 						<div className="footer-col">
 							<h4>Address</h4>
 							<ul classNameName="ul">
 								<li><a><i className="far fa-phone"></i>.  .6263362660, 7828383066 </a></li>
-								<li><a><i className="fad fa-envelope-square"></i>. .DAANPATRA18@GMAIL.COM </a></li>
+								<li><a><i className="fad fa-envelope-square"></i>DAANPATRA18@GMAIL.COM </a></li>
 							</ul>
 						</div>
 						<div className="footer-col">

@@ -17,6 +17,7 @@ import GalleryHome from "./component/news gallary/topart";
 import Scroll from "./component/Scroll";
 import Social from './component/social';
 import Whatsapp from './component/Whatsaap';
+import FAQ from "./component/FAQ/FAQ";
 import Sidebar from "./Dashbord/sidebar/Sidebar";
 import Navbars from "./Dashbord/navbar/Navbar";
 
@@ -24,24 +25,11 @@ import Navbars from "./Dashbord/navbar/Navbar";
 
 function App() {
 
-  // const [sidebaropen,setSidebaropen] = useState(false);
-
-  // const openSidebar = () =>{
-  //   setSidebaropen(true);
-  //  };
-
-  //  const closeSidebar = () =>{
-  //    setSidebaropen(false);
-
-  //  };  
   return (
     <>
 
       <Navbar />
       
-
-
-
       <Switch>
 
         <Route exact path='/' component={Home} />
@@ -54,6 +42,7 @@ function App() {
         <Route exact path='/signup' component={Signup} />
         <Route exact path='/gallery' component={Gallery} />
         <Route exact path='/galleryhome' component={GalleryHome} />
+        <Route exact path='/faq' component={FAQ} />
         <Route component={Error} />
 
       </Switch>
@@ -65,7 +54,7 @@ function App() {
       <Social />
 
       <Whatsapp /> 
-     
+
 
 
 

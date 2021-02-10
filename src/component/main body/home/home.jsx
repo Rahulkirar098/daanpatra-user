@@ -15,7 +15,7 @@ const Home = () =>{
     return(
         <>
     <div className="background" id="home">
-       <Bounce><Slide /></Bounce> 
+        <Slide />
     </div>
     <Weare />
        <WhatWeDo />
