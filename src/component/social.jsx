@@ -23,7 +23,7 @@ const Social = () =>{
   </div>
   <div className="social linkedin">
     <a href=" https://www.instagram.com " target="_blank">
-      <p>Connect on LinkedIn    . <i class="fa fa-instagram" ></i> </p>
+      <p>Connect on Instagram    . <i class="fa fa-instagram" ></i> </p>
     </a>
   </div>
 </div>

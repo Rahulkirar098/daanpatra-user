@@ -5,11 +5,8 @@ import {Link} from 'react-router-dom';
 const Footer = () => {
 	return (
 		<footer className="footer">
-			<div style={{
-
-				opacity: 0.7
-			}}>
-				<div style={{backgroundColor : "black"}}>
+			<div className="div-opacity" >
+				<div className="div-color">
 					<div className="row">
 						<div className="footer-col">
 							<h4>About us</h4>

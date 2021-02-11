@@ -18,8 +18,6 @@ import Scroll from "./component/Scroll";
 import Social from './component/social';
 import Whatsapp from './component/Whatsaap';
 import FAQ from "./component/FAQ/FAQ";
-import Sidebar from "./Dashbord/sidebar/Sidebar";
-import Navbars from "./Dashbord/navbar/Navbar";
 
 
 
@@ -54,6 +52,9 @@ function App() {
       <Social />
 
       <Whatsapp /> 
+      
+
+      
 
 
 
