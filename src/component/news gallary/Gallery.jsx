@@ -3,7 +3,6 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import photos from "./PhotoData";
 import "./gallery.css";
-import Fade from 'react-reveal/Fade';
 
 function Stuck() {
 

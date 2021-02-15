@@ -31,7 +31,7 @@ const Volunteer = () => {
             <div className="right-volunteer">
 
                 
-            <img src={VolunteerGif} />
+            <img src={VolunteerGif} alt="img" />
             
             </div>
 

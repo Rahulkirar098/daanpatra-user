@@ -12,12 +12,12 @@ const GalleryHome = () =>{
 
             <div className="GH-left">
                        
-                       <Link to="/gallery"> <h1 className="h1"><img src={Gallery}></img></h1></Link>
+                       <Link to="/gallery"> <h1 className="h1"><img src={Gallery} alt="img"></img></h1></Link>
             </div>
 
             <div className="GH-right">
                       
-                      <Link to="/gallery"><h1 className="h1"><img src={Press}></img></h1></Link>
+                      <Link to="/gallery"><h1 className="h1"><img src={Press} alt="img"></img></h1></Link>
             </div>
         </div>
     )

@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import Slide from "./slide";
-import Bounce from 'react-reveal/Bounce';
 import Weare from "../weare/Weare";
 import WhatWeDo from "../../We do/Whatwedo";
 import News from "../news/News";
