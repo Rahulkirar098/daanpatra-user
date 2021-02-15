@@ -82,9 +82,9 @@ nav .links a:hover{
 		position: fixed;
 	}
 	.nav .logo {
-		
 		width: 40px;
 		justify-content: center; 
+
 	}
 	.nav .links {
 		float: none;

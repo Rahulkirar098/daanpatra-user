@@ -1,122 +1,84 @@
+.contact{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  margin-top: 15vh;
+  display: flex;
+}
+.contact-left{
+  width: 50%;
+  padding: 50px;
+}
+.contact-left img{
+  width: 100%;
+  margin-top: 5%;
+}
+.contact-right{
+  width: 50%;
+  padding: 50px;
+}
+.contact-right input{
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  padding:8px 0 5px 0;
+  font-size:16px;
+}
+.contact-right button{
+  border: none;
+  width: 20%;
+  text-align: center;
+  margin: 5% 0 0 2%;
+  font-size: 1.2rem;
+  color: #555;
+}
+.contact-right input:focus{
+  border:none;	
+ outline:none;
+ border-bottom: 5px solid yellow;
+}
+.input-all{
+  width: 100%;
+  margin: 10px;
+}
+.input-name{
+  width: 48%;
+  margin-left: 10px;
+}
+.input-discripation{
+  width: 100%;
+  margin: 10px;
+}
 
- .containers{
-    width: 90%;
-    height: 100vh;
-    margin: auto;
-    margin-top: 10%;
-    overflow: hidden;
+@media screen and (max-width:768px){
+  .contact{
+    display: block;
+    margin-top: 0;
     
   }
-  #contact-section{
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100% ;
-    padding-bottom: 2%;
-    padding-left: 5%;
-  }
-
-  #contact-section .container h2{
-    font-size: 2rem;
-    text-align: center;
-     text-decoration: underline;
-      text-underline-position: under;
-      letter-spacing: 2px;   
-  }
-
-  
-
-  #contact-section .container p{
-    font-size: 1.2rem;
-    text-align: center; 
-    width: 70%; 
-    margin: auto;
-    margin-top: 20px;
-     padding-bottom: 3%;
-    
-     letter-spacing:3px;
-  }
-
-  .contact-form i.fa{
-
-    font-size: 22px; 
-    padding: 3%;
-    background-color: none;
-    border-radius: 80%;
-    margin: 2%;
-    cursor: pointer;
-    border:2px solid rgb(190, 190, 190);
-
-  }
-  
-  .contact-form i.fa:hover{
-    cursor: pointer;
-    border:2px solid white;
-    
-  }
-   
-    .contact-form{
-      display: grid;
-      grid-template-columns: auto auto;
-       }
-    
-    .form-info{
-      font-size: 16px;
-      font-style: italic;
-
-      letter-spacing: 2px;
-    }
-    input{
-      padding: 10px;
-      margin:10px;
-      width: 100%;
-      background-color:rgba(136, 133, 133, 0.5);
-      border: none;
-      outline:none;
-    }
-
-  
-    textarea{
-    padding: 10px;
-    margin: 10px;     
+  .contact-left{
     width: 100%;
-    background-color:rgba(136, 133, 133, 0.5);
-    border: none;
-    outline:none;
-   }
-    
-  
-    .submit{
-    width: 70%;
-    background: none;
-    padding: 4px;
-    outline: none;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 33px;
-    text-align: center;
-    cursor: pointer;
-    letter-spacing: 2px;
-    margin-left: 15%;
-    border:2px solid rgb(190, 190, 190);
-    
-   }
-
-   .submit:hover{
-         border: 1px solid #fff;
-    cursor: pointer;
-   }
-  @media (max-width: 768px){
-
-#contact-section .contact-form{
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-    #contact-section .submit{
-
-      width: 60%;
-    }
-
+    padding: 0;
+  }
+  .contact-left img{
+        margin-top: 0;
+  }
+  .contact-right{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+  }
+  .contact-right button{
+    margin: 5% 0 5% 5% !important;
+  }
+  .input-name{
+    width: 100%;
+    margin: 10px;
+  }
+  .contact-right h1{
+    display: none;
+  }
+  .contact-right Button{
+  margin-left: 25%;
+}
 }

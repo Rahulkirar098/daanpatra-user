@@ -1,9 +1,12 @@
 import React from "react";
 import "./footer.css";
 import {Link} from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
 	return (
+		<Fade top>
+
 		<footer className="footer">
 			<div className="div-opacity" >
 				<div className="div-color">
@@ -48,6 +51,8 @@ const Footer = () => {
 				</div>
 			</div>
 		</footer >
+		</Fade>
+
 
 	)
 }

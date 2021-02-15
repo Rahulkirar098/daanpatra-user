@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import "./login.css";
 import ApiHandler, { signin } from "../../config/ApiHandler";
 import { otpGenerate } from "../../config/ApiHandler";
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -75,6 +76,7 @@ export default function SignIn() {
   };
 
   return (
+    <Fade top>
     <Container component="main" maxWidth="xs" className="login" id="login">
       <CssBaseline />
       <div className={classes.paper}>
@@ -82,6 +84,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
+    
         <TextField
           variant="outlined"
           margin="normal"
@@ -95,6 +98,7 @@ export default function SignIn() {
           value={phoneNo}
           onChange={(e) => setPhoneNo(e.target.value)}
         />
+     
         <TextField
           variant="outlined"
           margin="normal"
@@ -109,10 +113,7 @@ export default function SignIn() {
           value={otp}
           onChange={(e) => setOtp(e.target.value)}
         />
-        <FormControlLabel
-          control={<Checkbox value="remember" color="primary" />}
-          label="Remember me"
-        />
+       
         <Button
           fullWidth
           variant="contained"
@@ -132,5 +133,6 @@ export default function SignIn() {
       </div>
       <Box mt={8}>{/* <Copyright /> */}</Box>
     </Container>
+    </Fade>
   );
 }

@@ -3,12 +3,12 @@
 	margin: auto;
 	z-index: -5;
 	border: none;
-	padding-top: 7%;
+	padding-top: 6.5%;
 	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 	
 }
 .carousel_img{
-	height: 90vh;
+	height: 80vh;
 }
 @media screen and (max-width: 768px){
 	.carouselcss{

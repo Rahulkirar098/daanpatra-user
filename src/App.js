@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import './app.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Route, Switch } from 'react-router-dom';
 import Home from "./component/main body/home/home";
@@ -17,6 +18,7 @@ import GalleryHome from "./component/news gallary/topart";
 import Scroll from "./component/Scroll";
 import Social from './component/social';
 import Whatsapp from './component/Whatsaap';
+import Volunteer from "./component/volunteer/Volunteer";
 import FAQ from "./component/FAQ/FAQ";
 
 
@@ -41,6 +43,7 @@ function App() {
         <Route exact path='/gallery' component={Gallery} />
         <Route exact path='/galleryhome' component={GalleryHome} />
         <Route exact path='/faq' component={FAQ} />
+        <Route exact path='/volunteer' component={Volunteer} />
         <Route component={Error} />
 
       </Switch>
@@ -52,8 +55,6 @@ function App() {
       <Social />
 
       <Whatsapp /> 
-      
-
       
 
 

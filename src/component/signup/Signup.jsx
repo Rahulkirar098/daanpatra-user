@@ -13,6 +13,7 @@ import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import "./signup.css";
 import { signup } from "../../config/ApiHandler";
+import Fade from 'react-reveal/Fade';
 
 // function Copyright() {
 //   return (
@@ -68,6 +69,7 @@ export default function SignUp() {
   };
 
   return (
+    <Fade bottom>
     <Container component="main" maxWidth="xs" className="signup">
       <CssBaseline />
       <div className={classes.paper}>
@@ -142,5 +144,6 @@ export default function SignUp() {
       </div>
       <Box mt={5}>{/* <Copyright /> */}</Box>
     </Container>
+    </Fade>
   );
 }

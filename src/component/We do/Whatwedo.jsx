@@ -1,14 +1,28 @@
 import React from "react";
 import "./whatwedo.css"
 import Chart from "../../assect/chart.png";
+import Typewriter from 'typewriter-effect'
+import Fade from 'react-reveal/Fade';
 
 const WhatWeDo = () => {
     return (
+        <Fade top>
         <div className="whatwedo" id="wedo">
             <center><h1 className="wedo-h1">How Daanpatra Work</h1></center>
-            <p className="wedo-p">At Daanpatra, we provide practical, tangible help that makes an immediate difference to orphaned children.
-                 We are working towards a day when every child can grow up in a loving family.</p>
+            <p className="wedo-p">
+                 <Typewriter 
+                 options={{
+                    autoStart: true,
+                    loop: true,
+                  }}onInit={(wedo)=>{
+                    wedo.typeString("At Daanpatra, we provide practical, tangible help that makes an immediate difference to orphaned children. We are working towards a day when every child can grow up in a loving family.")
+                    .pauseFor(2000)
+                    .start();
+                  }}
+                  /></p>
 
+                 <img className="chart-digram" src={Chart} alt="chart" />
+                 
             <div className="wedo-pwf">
 
                 <div className="Hunger">
@@ -31,8 +45,10 @@ const WhatWeDo = () => {
 
             </div>
 
-            <img className="chart-digram" src={Chart} alt="chart" />
+            {/* <img className="chart-digram" src={Chart} alt="chart" /> */}
+
         </div>
+        </Fade>
     )
     
 };

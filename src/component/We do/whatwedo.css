@@ -3,9 +3,9 @@
     height: 100%;
     margin-top: 10%;
 }
-/* .wedo-h1{
-    margin-top: 10%;
-} */
+.wedo-h1{
+    color: gray;
+}
 .wedo-p{
     width: 60%;
     margin: auto;
@@ -18,7 +18,7 @@
     margin: auto;
     display: flex;
     justify-content: space-around;
-    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .Hunger{
     width: 25%;
@@ -50,7 +50,7 @@
 }
 .chart-digram{
     width: 1000px;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 @media screen and (max-width: 768px){
     .whatwedo{
@@ -58,11 +58,13 @@
         margin: auto;
         height: 100%;
         margin-top: 17%;
+        
     }
     .wedo-p{
         width: 100%;
         text-align: justify;
         line-height: 1.5;
+        font-size: 1rem;
     }
     .wedo-pwf{
         width: 100%;
@@ -70,6 +72,7 @@
     }
     .wedo-pwf p{
         line-height: 1.5;
+        font-size: 1rem;
     }
     .Hunger{
         width: 100%;
