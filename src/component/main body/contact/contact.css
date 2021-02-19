@@ -30,7 +30,7 @@
   text-align: center;
   margin: 5% 0 0 2%;
   font-size: 1.2rem;
-  color: #555;
+  /* color: #555; */
 }
 .contact-right input:focus{
   border:none;	

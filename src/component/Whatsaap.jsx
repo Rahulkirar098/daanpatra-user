@@ -21,7 +21,7 @@ const Whatsaap = () =>{
     return(
 
         <div className="action">
-           <a href="https://web.whatsapp.com/"> <i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+           <a href="https://web.whatsapp.com/"> <i className="fa fa-whatsapp" aria-hidden="true"></i></a>
         </div>
 
     )

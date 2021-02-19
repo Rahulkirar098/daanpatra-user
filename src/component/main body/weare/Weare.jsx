@@ -44,7 +44,7 @@ const Weare = () => {
                 contacts you and collects goods from home , as well as your photo is shown on daanpatra app as well
                 as social media pages so that you can become an inspiration to others so that more people came forward
                 for joining this initiative for this noble cause. Through this plateform, millions of helpless people
-                             have been helped.</p>
+                have been helped.</p>
             </div>
         </div>
         </Fade>

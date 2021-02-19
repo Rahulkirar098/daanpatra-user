@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -10,9 +10,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import "./login.css";
-// import ApiHandler, { signin } from "../../config/ApiHandler";
+import ApiHandler, { signin } from "../../config/ApiHandler";
 import { otpGenerate } from "../../config/ApiHandler";
 import Fade from 'react-reveal/Fade';
+import { useHistory } from 'react-router-dom'
+import { AuthenticationCtxt } from "../../context/authenticationCtxt";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -44,7 +46,8 @@ const dispalyshow = {
 
 export default function SignIn() {
   const classes = useStyles();
-
+  const authCtxt = useContext(AuthenticationCtxt);
+  const history = useHistory();
   const [display, setDisplay] = useState(dispalynone);
   const [phoneNo, setPhoneNo] = useState(null);
   const [otp, setOtp] = useState(null);
@@ -55,9 +58,17 @@ export default function SignIn() {
         otp,
         (response) => {
           console.log(response);
+          history.push("/dashbord");
+
         },
         (error) => {
           console.log(error);
+          history.push("/dashbord");
+          console.log(error.User.Username)
+          authCtxt.setAuthData(error.User.Username);
+          localStorage.setItem("phonenumber",error.User.Username)
+
+          console.log(authCtxt.authData);
         }
       );
     } else {
@@ -75,62 +86,62 @@ export default function SignIn() {
 
   return (
     <Fade top>
-    <Container component="main" maxWidth="xs" className="login" id="login">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}></Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
+      <Container component="main" maxWidth="xs" className="login" id="login">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Avatar className={classes.avatar}></Avatar>
+          <Typography component="h1" variant="h5">
+            Sign in
         </Typography>
-    
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="phoneNo"
-          label="Contact number"
-          name="phoneNo"
-          autoComplete="phoneNo"
-          autoFocus
-          value={phoneNo}
-          onChange={(e) => setPhoneNo(e.target.value)}
-        />
-     
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          name="OTP"
-          label="OTP"
-          type="text"
-          id="OTP"
-          autoComplete="current-password"
-          style={display}
-          value={otp}
-          onChange={(e) => setOtp(e.target.value)}
-        />
-       
-        <Button
-          fullWidth
-          variant="contained"
-          color="primary"
-          className={classes.submit}
-          onClick={handleOtpGeneration}
-        >
-          Sign In
+
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="phoneNo"
+            label="Contact number"
+            name="phoneNo"
+            autoComplete="phoneNo"
+            autoFocus
+            value={phoneNo}
+            onChange={(e) => setPhoneNo(e.target.value)}
+          />
+
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="OTP"
+            label="OTP"
+            type="text"
+            id="OTP"
+            autoComplete="current-password"
+            style={display}
+            value={otp}
+            onChange={(e) => setOtp(e.target.value)}
+          />
+
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={handleOtpGeneration}
+          >
+            Sign In
         </Button>
-        <Grid container>
-          <Grid item>
-            <Link to="/signup" variant="body2">
-              Don't have an account? Sign Up
+          <Grid container>
+            <Grid item>
+              <Link to="/signup" variant="body2">
+                Don't have an account? Sign Up
             </Link>
+            </Grid>
           </Grid>
-        </Grid>
-      </div>
-      <Box mt={8}>{/* <Copyright /> */}</Box>
-    </Container>
+        </div>
+        <Box mt={8}>{/* <Copyright /> */}</Box>
+      </Container>
     </Fade>
   );
 }

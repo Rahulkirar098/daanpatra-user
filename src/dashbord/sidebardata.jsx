@@ -8,20 +8,16 @@ import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 
 
 export const sidebardata = [
+   
     {
-        title:"Home",
-        icon:<HomeIcon />,
-        link:"/"
+        title:"Certificate",
+        icon:<CardMembershipIcon />,
+        link:"/certificate"
     },
     {
         title:"Gallery",
         icon:<ImageIcon />,
         link:"/gallery"
-    },
-    {
-        title:"Certificate",
-        icon:<CardMembershipIcon />,
-        link:"/certificate"
     },
     {
         title:"Donate",
@@ -36,8 +32,12 @@ export const sidebardata = [
     {
         title:"FAQ",
         icon:<LiveHelpIcon />,
-        link:"/faqdashbord"
+        link:"/faq"
     },
-    
+    {
+        title:"Home",
+        icon:<HomeIcon />,
+        link:"/profile"
+    },
     
 ]

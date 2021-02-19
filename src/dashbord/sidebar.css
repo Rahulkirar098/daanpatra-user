@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 .dashbord-sidebar{
     display: flex;
 }
@@ -64,6 +60,7 @@
     .sidebar{
         width: 100%;
         height: 100%;
+        background-color: orange;
     }
     .sidebarmenu{
         width: 100%;

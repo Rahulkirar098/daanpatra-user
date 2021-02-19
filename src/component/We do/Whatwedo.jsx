@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect'
 import Fade from 'react-reveal/Fade';
 
 const WhatWeDo = () => {
-    return (
+    return (<>
         <Fade top>
         <div className="whatwedo" id="wedo">
             <center><h1 className="wedo-h1">How Daanpatra Work</h1></center>
@@ -49,6 +49,7 @@ const WhatWeDo = () => {
 
         </div>
         </Fade>
+        </>
     )
     
 };

@@ -10,8 +10,12 @@ const Contact = () => {
   const[phone,setPhone] = useState('');
   const[discription,setDiscription] = useState('');
 
-  const contactsubmit = () =>{
+
+  const contactsubmit = (e) =>{
+    e.preventDefault();
+    console.log("asdfgh")
         console.log(first_name,last_name,email,phone,discription);
+        
         let data = {first_name,last_name,email,phone,discription};
 
         fetch("http://127.0.0.1:8000/contact/",{
@@ -24,7 +28,7 @@ const Contact = () => {
         }).then((result)=>{
           console.log("result",result);
         })
-  }
+      }
 
 
     return (
@@ -36,9 +40,9 @@ const Contact = () => {
         </div>
 
         <div className="contact-right">
+        
 
-
-        <form>
+        <form onSubmit={(e) => contactsubmit(e)} >
 
           <input className="input-name" placeholder="Frist Name" value={first_name} onChange={(e)=>{
             setFristName(e.target.value)}} />
@@ -59,7 +63,7 @@ const Contact = () => {
             setDiscription(e.target.value)}}/>
           <br />
           <br />
-          <button type="submit" onSubmit={contactsubmit()}>Submit</button>
+          <button type="submit" >Submit</button>
         
           </form>
 

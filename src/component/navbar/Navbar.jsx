@@ -7,15 +7,11 @@ import Bounce from 'react-reveal/Bounce';
 import Slide from 'react-reveal/Slide';
 
 
-
-
-
-
 const Head = () => {
 
 
     return (
-        <>
+
 
             <header>
 
@@ -29,14 +25,14 @@ const Head = () => {
                         <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/weare">We Are</NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/whatwedo">We Do</NavLink></li>
-                        <li ><NavLink exact activeClassName="active" to="/galleryhome">Gallery</NavLink></li>
+                        <li><NavLink exact activeClassName="active" to="/galleryhome">Gallery</NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/login">Donate</NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/Volunteer">Volunteer</NavLink></li>
                         <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li> 
                         
                     </ul>
                     </Slide>
-                    <label for="nav-toggle" className="icon-burger">
+                    <label htmlFor="nav-toggle" className="icon-burger">
                         <div className="line"></div>
                         <div className="line"></div>
                         <div className="line"></div>
@@ -48,7 +44,7 @@ const Head = () => {
 
             </header>
 
-        </>
+      
     )
 
 };

@@ -15,7 +15,7 @@ const getResult = (
   }
   parameters.headers = {
     "Content-Type": "application/json",
-    Accept: "application/json",
+    // Accept: x"application/json",
   };
   try {
     fetch(conf.apiUrl + url, parameters)
@@ -30,6 +30,8 @@ const getResult = (
     failed(error);
   }
 };
+
+
 export const otpGenerate = (
   phoneNo,
   success = (response) => {},

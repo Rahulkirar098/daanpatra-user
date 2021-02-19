@@ -4,9 +4,9 @@ import img3 from "../../assect/3.jpg";
 import img4 from "../../assect/4.jpg";
 import img5 from "../../assect/slide1.jpg";
 import img6 from "../../assect/slide2.jpg";
-import img7 from "../../assect/slide3.jpg";
-import img8 from "../../assect/wheet.jpg";
-import img9 from "../../assect/good.jpeg";
+import img7 from "../../assect/img (2).jpeg";
+import img8 from "../../assect/img (1).jpeg";
+import img9 from "../../assect/img (3).jpeg";
 import img10 from "../../assect/img (10).jpeg";
 
 const photos = [
@@ -21,22 +21,22 @@ const photos = [
         height: 4
       },
       {
-        src: img3,
+        src: img10,
         width: 4,
         height: 3
       },
       {
-        src: img4,
+        src: img10,
         width: 4,
         height: 3
       },
       {
-        src: img5,
+        src: img9,
         width: 4,
         height: 3
       },
       {
-        src: img6,
+        src: img10,
         width: 4,
         height: 3
       },
