@@ -31,7 +31,6 @@ const getResult = (
   }
 };
 
-
 export const otpGenerate = (
   phoneNo,
   success = (response) => {},
@@ -61,21 +60,11 @@ export const signin = (phoneNo, otp, success = () => {}, failed = () => {}) => {
     "POST",
     JSON.stringify({ username: phoneNo, password: otp }),
     (response) => {
-      if (response.status === 200) {
-        success(response);
-      } else {
-        failed(response);
-      }
+      success(response);
     }
   );
 };
-export const signup = (
-  fname,
-  lname,
-  phoneNo,
-  success = () => {},
-  failed = () => {}
-) => {
+export const signup = (fname, lname, phoneNo, success = () => {}) => {
   if (!fname || !lname || !phoneNo) return;
   getResult(
     "/user-register/",
@@ -87,11 +76,7 @@ export const signup = (
       last_name: lname,
     }),
     (response) => {
-      if (response.status === 200) {
-        success(response);
-      } else {
-        failed(response);
-      }
+      success(response);
     }
   );
 };

@@ -12,8 +12,8 @@ import { Link } from "react-router-dom";
 import "./login.css";
 import ApiHandler, { signin } from "../../config/ApiHandler";
 import { otpGenerate } from "../../config/ApiHandler";
-import Fade from 'react-reveal/Fade';
-import { useHistory } from 'react-router-dom'
+import Fade from "react-reveal/Fade";
+import { useHistory } from "react-router-dom";
 import { AuthenticationCtxt } from "../../context/authenticationCtxt";
 
 const useStyles = makeStyles((theme) => ({
@@ -53,24 +53,11 @@ export default function SignIn() {
   const [otp, setOtp] = useState(null);
   const handleOtpGeneration = () => {
     if (display === dispalyshow) {
-      signin(
-        phoneNo,
-        otp,
-        (response) => {
-          console.log(response);
-          history.push("/dashbord");
-
-        },
-        (error) => {
-          console.log(error);
-          history.push("/dashbord");
-          console.log(error.User.Username)
-          authCtxt.setAuthData(error.User.Username);
-          localStorage.setItem("phonenumber",error.User.Username)
-
-          console.log(authCtxt.authData);
-        }
-      );
+      signin(phoneNo, otp, (response) => {
+        history.push("/dashbord");
+        authCtxt.setAuthData(response.User.Username);
+        localStorage.setItem("phoneNo", response.User.Username);
+      });
     } else {
       otpGenerate(
         phoneNo,
@@ -92,7 +79,7 @@ export default function SignIn() {
           <Avatar className={classes.avatar}></Avatar>
           <Typography component="h1" variant="h5">
             Sign in
-        </Typography>
+          </Typography>
 
           <TextField
             variant="outlined"
@@ -131,12 +118,12 @@ export default function SignIn() {
             onClick={handleOtpGeneration}
           >
             Sign In
-        </Button>
+          </Button>
           <Grid container>
             <Grid item>
               <Link to="/signup" variant="body2">
                 Don't have an account? Sign Up
-            </Link>
+              </Link>
             </Grid>
           </Grid>
         </div>

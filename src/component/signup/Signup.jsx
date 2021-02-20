@@ -13,7 +13,7 @@ import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import "./signup.css";
 import { signup } from "../../config/ApiHandler";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 // function Copyright() {
 //   return (
@@ -55,95 +55,87 @@ export default function SignUp() {
   const [phoneNo, setPhoneNo] = useState(null);
 
   const handleSignUpClick = () => {
-    signup(
-      fname,
-      lname,
-      phoneNo,
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    signup(fname, lname, phoneNo, (response) => {
+      console.log(response);
+    });
   };
 
   return (
     <Fade bottom>
-    <Container component="main" maxWidth="xs" className="signup">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}></Avatar>
-        <Typography component="h1" variant="h5">
-          Sign up
-        </Typography>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              autoComplete="fname"
-              name="firstName"
-              variant="outlined"
-              required
-              fullWidth
-              id="firstName"
-              label="First Name"
-              autoFocus
-              value={fname}
-              onChange={(e) => setFname(e.target.value)}
-            />
+      <Container component="main" maxWidth="xs" className="signup">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Avatar className={classes.avatar}></Avatar>
+          <Typography component="h1" variant="h5">
+            Sign up
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                autoComplete="fname"
+                name="firstName"
+                variant="outlined"
+                required
+                fullWidth
+                id="firstName"
+                label="First Name"
+                autoFocus
+                value={fname}
+                onChange={(e) => setFname(e.target.value)}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="lastName"
+                label="Last Name"
+                name="lastName"
+                autoComplete="lname"
+                value={lname}
+                onChange={(e) => setLname(e.target.value)}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="phoneNo"
+                label="Contact number"
+                name="phoneNo"
+                autoComplete="phoneNo"
+                value={phoneNo}
+                onChange={(e) => setPhoneNo(e.target.value)}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormControlLabel
+                control={<Checkbox value="allowExtraEmails" color="primary" />}
+                label="I want to receive inspiration, marketing promotions and updates via email."
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              variant="outlined"
-              required
-              fullWidth
-              id="lastName"
-              label="Last Name"
-              name="lastName"
-              autoComplete="lname"
-              value={lname}
-              onChange={(e) => setLname(e.target.value)}
-            />
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={handleSignUpClick}
+          >
+            Sign Up
+          </Button>
+          <Grid container justify="flex-end">
+            <Grid item>
+              <Link to="/login" variant="body2">
+                Already have an account? Sign in
+              </Link>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <TextField
-              variant="outlined"
-              required
-              fullWidth
-              id="phoneNo"
-              label="Contact number"
-              name="phoneNo"
-              autoComplete="phoneNo"
-              value={phoneNo}
-              onChange={(e) => setPhoneNo(e.target.value)}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <FormControlLabel
-              control={<Checkbox value="allowExtraEmails" color="primary" />}
-              label="I want to receive inspiration, marketing promotions and updates via email."
-            />
-          </Grid>
-        </Grid>
-        <Button
-          fullWidth
-          variant="contained"
-          color="primary"
-          className={classes.submit}
-          onClick={handleSignUpClick}
-        >
-          Sign Up
-        </Button>
-        <Grid container justify="flex-end">
-          <Grid item>
-            <Link to="/login" variant="body2">
-              Already have an account? Sign in
-            </Link>
-          </Grid>
-        </Grid>
-      </div>
-      <Box mt={5}>{/* <Copyright /> */}</Box>
-    </Container>
+        </div>
+        <Box mt={5}>{/* <Copyright /> */}</Box>
+      </Container>
     </Fade>
   );
 }
