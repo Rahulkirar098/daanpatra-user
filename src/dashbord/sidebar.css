@@ -1,10 +1,11 @@
-
 .dashbord-sidebar{
     display: flex;
+    /* width: 20%; */
 }
 .sidebar{
-    width: 20%;
-    height: 100vh;
+   width: 20%;
+   height: 100vh;
+   /* border: green 2px solid; */
 }
 .sidebarmenu{
     width: 100%;

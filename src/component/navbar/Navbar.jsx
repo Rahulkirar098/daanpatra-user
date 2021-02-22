@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./navbar.css"
 import {Link} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
@@ -10,8 +10,13 @@ import Slide from 'react-reveal/Slide';
 const Head = () => {
 
 
-    return (
 
+
+useEffect(() => {
+  
+}, [])
+
+    return (
 
             <header>
 

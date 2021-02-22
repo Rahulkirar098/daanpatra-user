@@ -17,7 +17,7 @@ export const sidebardata = [
     {
         title:"Gallery",
         icon:<ImageIcon />,
-        link:"/gallery"
+        link:"/gallerys"
     },
     {
         title:"Donate",
@@ -27,17 +27,17 @@ export const sidebardata = [
     {
         title:"Volunteer",
         icon:<ThumbsUpDownIcon />,
-        link:"/volunteer"
+        link:"/volunteers"
     },
     {
         title:"FAQ",
         icon:<LiveHelpIcon />,
-        link:"/faq"
+        link:"/faqs"
     },
     {
-        title:"Home",
+        title:"Logout",
         icon:<HomeIcon />,
-        link:"/profile"
+        link:"/"
     },
     
 ]

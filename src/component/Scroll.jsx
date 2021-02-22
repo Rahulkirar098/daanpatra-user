@@ -29,6 +29,7 @@ const Scroll = () => {
             <div className="scroll coursor-pointer text-center" onClick={scrollTotop}>
 
                 <i className="icon fas fa-chevron-up"></i>
+                
             </div>
 
         </>

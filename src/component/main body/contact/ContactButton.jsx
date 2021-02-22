@@ -19,7 +19,7 @@ const ContactButton = () => {
 <button className="button"><span>
 
 
-    <Link  exact to="/contact"  style={{color:"white"}}>Contact us </Link>
+    <Link  exact to="/contact"  style={{color:"black"}}>Contact us </Link>
 </span></button></Fade>
             </div>
 </div></div>

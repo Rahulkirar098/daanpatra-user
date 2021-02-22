@@ -7,22 +7,22 @@ import News from "../news/News";
 import ContactBtn from '../contact/ContactButton'
 
 
-const Home = () =>{
+const Home = () => {
 
-    
-   
-    return(
+
+
+    return (
         <>
-    <div className="background" id="home">
-        <Slide />
-    </div>
-    <Weare />
-       <WhatWeDo />
-       <ContactBtn />
-       <News />
-       
-       </>
-)
-    
+            <div className="background" id="home">
+            <Slide />
+            </div>
+            <Weare />
+            <WhatWeDo />
+            <ContactBtn />
+            <News />
+
+        </>
+    )
+
 }
 export default Home;

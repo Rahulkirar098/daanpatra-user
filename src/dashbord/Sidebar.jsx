@@ -5,20 +5,20 @@ import { Route, Switch } from 'react-router-dom';
 import { sidebardata } from "./sidebardata";
 import Certificate from "./Pages/Certificate";
 import Donate from "./Pages/Donate";
-import FaqDashbord from "./Pages/Faq";
 import Gallery from "../component/news gallary/Gallery";
 import Volunteer from "../component/volunteer/Volunteer";
-import Profile from "./Pages/Profile";
+import FAQ from "../component/FAQ/FAQ";
 
 
 
 
 const Sidebar = () => {
+    
     return (
         <div className="dashbord-sidebar">
             <div className="sidebar">
                 <div className="Profile">
-                    <img className="userprofile" src={Userprofile}  alt="profile"/>
+                    <img className="userprofile" src={Userprofile} alt="profile" />
                     <h2>Rahul kirar</h2>
                 </div>
                 <ul className="sidebarmenu">
@@ -30,11 +30,22 @@ const Sidebar = () => {
                                 <div id="sideicon">{val.icon}</div>
                                 <div id="sidetitle">{val.title}</div>
                             </li>
+                            
                         )
                     })}
+                    
                 </ul>
             </div>
             <div className="right-dashbord">
+
+
+                <Route exact="true" path="/certificate" component={Certificate} />
+                <Route exact="true" path="/gallerys" component={Gallery} />
+                <Route exact="true" path="/donate" component={Donate} />
+                <Route exact="true" path="/volunteers" component={Volunteer} />
+                <Route exact="true" path="/faqs" component={FAQ} />
+
+
             </div>
         </div>
     )
