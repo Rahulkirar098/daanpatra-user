@@ -7,13 +7,13 @@ import VolunteerGif from "../../assect/volunteer.gif";
 const Volunteer = () => {
     const[full_name,setFullName] = useState('');
     const[email,setEmail] = useState('');
-    const[phone,setPhone] = useState('');
+    const[contact_no,setContact_no] = useState('');
     const[address,setAddress] = useState('');
 
     const volunteersumit = (v) =>{
         v.preventDefault();
 
-        let volunteerdata = {full_name,email,phone,address};
+        let volunteerdata = {full_name,email,contact_no,address};
         
         fetch("http://127.0.0.1:8000/volunteer/",{
           method:'POST',
@@ -40,8 +40,8 @@ const Volunteer = () => {
             setFullName(e.target.value)}} />
                     <br />
                     <br />
-                    <input className="volunteer-input" placeholder="Phone Number" value={phone} onChange={(e)=>{
-            setPhone(e.target.value)}}/>
+                    <input className="volunteer-input" placeholder="Phone Number" value={contact_no} onChange={(e)=>{
+            setContact_no(e.target.value)}}/>
                     <br />
                     <br />
                     <input className="volunteer-input" placeholder="Address" value={address} onChange={(e)=>{

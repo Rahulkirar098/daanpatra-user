@@ -30,22 +30,22 @@ const WhatWeDo = () => {
 
                     <div className="Hunger">
                         <img src={Food} />
-                        <h2>Preventing Hunger</h2>
-                        <p>Fresh food prepared at select locations are often donated to feed hungry people by contributing in cash.
-.</p>
+                        <h2>Food</h2>
+                        <p>We aim to redistribute surplus food to those who are in need of it. Please call our helpline, our volunteers will collect the excess food.</p>
                     </div>
 
                     <div className="Clothing">
                     <img src={Cloths} />
 
                         <h2>Clothing</h2>
-                        <p>Many children are in constant need of warm clothing. By providing it, Daanpatra also protects children from cold..</p>
+                        <p>while you have extra clothes, there is someone out there in the need of clothes care of others and DONATE NOW.</p>
                     </div>
 
                     <div className="Financial ">
                     <img src={Applinces} />
-                        <h2>Financial Assistance</h2>
-                        <p>One of our main tasks is providing financial help & reliable assistance to orphaned children.</p>
+                        <h2>Other</h2>
+                        <p>Donate reusable items from the convenience of
+your house. Avail doorstep pickup and get your donations delivered to the ones in need.</p>
                     </div>
 
                 </div>

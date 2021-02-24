@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import "./login.css";
-import ApiHandler, { signin } from "../../config/ApiHandler";
+import { signin } from "../../config/ApiHandler";
 import { otpGenerate } from "../../config/ApiHandler";
 import Fade from "react-reveal/Fade";
 import { useHistory } from "react-router-dom";

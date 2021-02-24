@@ -8,12 +8,13 @@ import Donate from "./Pages/Donate";
 import Gallery from "../component/news gallary/Gallery";
 import Volunteer from "../component/volunteer/Volunteer";
 import FAQ from "../component/FAQ/FAQ";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
 
 
 const Sidebar = () => {
-    
+
     return (
         <div className="dashbord-sidebar">
             <div className="sidebar">
@@ -30,10 +31,14 @@ const Sidebar = () => {
                                 <div id="sideicon">{val.icon}</div>
                                 <div id="sidetitle">{val.title}</div>
                             </li>
-                            
                         )
                     })}
-                    
+
+                    <li className="sidebarli"><div id="sideicon"><ExitToAppIcon /></div>
+                        <div id="sidetitle">Logout</div>
+                        </li>
+
+
                 </ul>
             </div>
             <div className="right-dashbord">

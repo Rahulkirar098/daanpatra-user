@@ -7,16 +7,16 @@ const Contact = () => {
   const[first_name,setFristName] = useState('');
   const[last_name,setLastName] = useState('');
   const[email,setEmail] = useState('');
-  const[phone,setPhone] = useState('');
-  const[discription,setDiscription] = useState('');
+  const[contact_no,setContact_no] = useState('');
+  const[message,setMessage] = useState('');
 
 
   const contactsubmit = (e) =>{
     e.preventDefault();
     console.log("asdfgh")
-        console.log(first_name,last_name,email,phone,discription);
+        console.log(first_name,last_name,email,contact_no,message);
         
-        let data = {first_name,last_name,email,phone,discription};
+        let data = {first_name,last_name,email,contact_no,message};
 
         fetch("http://127.0.0.1:8000/contact/",{
           method:'POST',
@@ -55,12 +55,12 @@ const Contact = () => {
             setEmail(e.target.value)}}/>
           <br />
           <br />
-          <input className="input-all" placeholder="Phone Number" value={phone} onChange={(e)=>{
-            setPhone(e.target.value)}}/>
+          <input className="input-all" placeholder="Phone Number" value={contact_no} onChange={(e)=>{
+            setContact_no(e.target.value)}}/>
           <br />
           <br />
-          <input className="input-discripation" placeholder="Discription" value={discription} onChange={(e)=>{
-            setDiscription(e.target.value)}}/>
+          <input className="input-discripation" placeholder="Discription" value={message} onChange={(e)=>{
+            setMessage(e.target.value)}}/>
           <br />
           <br />
           <button type="submit" >Submit</button>

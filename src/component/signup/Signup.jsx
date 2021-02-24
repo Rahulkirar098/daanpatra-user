@@ -3,8 +3,6 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
@@ -12,21 +10,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import "./signup.css";
-import { signup } from "../../config/ApiHandler";
 import Fade from "react-reveal/Fade";
 
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://material-ui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -50,16 +36,34 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
   const classes = useStyles();
-  const [fname, setFname] = useState(null);
-  const [lname, setLname] = useState(null);
-  const [phoneNo, setPhoneNo] = useState(null);
 
-  const handleSignUpClick = () => {
-    signup(fname, lname, phoneNo, (response) => {
-      console.log(response);
-    });
-  };
 
+  const[first_name,setFristName] = useState('');
+  const[last_name,setLastName] = useState('');
+  const[contact,setContact] = useState('');
+
+  const signUp = () =>{
+
+        console.log(first_name,last_name,contact);
+        console.log("create")
+        
+        let data = {first_name,last_name,contact};
+
+        fetch("http://127.0.0.1:8000/user-register/",{
+          method:'POST',
+          headers:{
+            'Accept':'application/json',
+            'Content-Type': 'application/json'
+          },
+          body:JSON.stringify(data)
+        }).then((result)=>{
+          console.log("result",result);
+        })
+      }
+
+
+
+ 
   return (
     <Fade bottom>
       <Container component="main" maxWidth="xs" className="signup">
@@ -80,8 +84,8 @@ export default function SignUp() {
                 id="firstName"
                 label="First Name"
                 autoFocus
-                value={fname}
-                onChange={(e) => setFname(e.target.value)}
+                value={first_name}
+                onChange={(e)=>{setFristName(e.target.value)}}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -93,8 +97,8 @@ export default function SignUp() {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
-                value={lname}
-                onChange={(e) => setLname(e.target.value)}
+                value={last_name}
+                onChange={(e)=>{setLastName(e.target.value)}}
               />
             </Grid>
             <Grid item xs={12}>
@@ -106,14 +110,8 @@ export default function SignUp() {
                 label="Contact number"
                 name="phoneNo"
                 autoComplete="phoneNo"
-                value={phoneNo}
-                onChange={(e) => setPhoneNo(e.target.value)}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                value={contact}
+                onChange={(e) => setContact(e.target.value)}
               />
             </Grid>
           </Grid>
@@ -122,7 +120,7 @@ export default function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={handleSignUpClick}
+            onClick={signUp}
           >
             Sign Up
           </Button>

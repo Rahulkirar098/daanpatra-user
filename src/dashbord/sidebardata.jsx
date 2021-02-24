@@ -1,5 +1,4 @@
 import React from "react";
-import HomeIcon from '@material-ui/icons/Home';
 import ImageIcon from '@material-ui/icons/Image';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
@@ -33,11 +32,6 @@ export const sidebardata = [
         title:"FAQ",
         icon:<LiveHelpIcon />,
         link:"/faqs"
-    },
-    {
-        title:"Logout",
-        icon:<HomeIcon />,
-        link:"/"
-    },
+    }
     
 ]

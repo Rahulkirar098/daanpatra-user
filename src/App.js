@@ -6,7 +6,6 @@ import Home from "./component/main body/home/home";
 import Footer from "./component/footer/Footer";
 import Contact from "./component/main body/contact/contact";
 import Weare from "./component/main body/weare/Weare";
-import News from "./component/main body/news/News";
 import WhatWeDo from "./component/We do/Whatwedo";
 import Navbar from "./component/navbar/Navbar";
 import Error from "./component/Error/Error";
@@ -19,9 +18,6 @@ import Social from "./component/social";
 import Whatsapp from "./component/Whatsaap";
 import Volunteer from "./component/volunteer/Volunteer";
 import FAQ from "./component/FAQ/FAQ";
-import Donate from "./dashbord/Pages/Donate";
-import Certificate from "./dashbord/Pages/Certificate";
-import Profile from "./dashbord/Pages/Profile";
 import Sidebar from "./dashbord/Sidebar";
 import {
   AuthenticationCtxt,
@@ -51,6 +47,8 @@ function App() {
 
       <Switch>
 
+          if(true){<>
+            
         <Route exact="true" path="/" component={Home} />
         <Route exact="true" path="/Weare" component={Weare} />
         <Route exact="true" path="/whatwedo" component={WhatWeDo} />
@@ -61,8 +59,11 @@ function App() {
         <Route exact="true" path="/signup" component={Signup} />
         <Route exact="true" path="/faq" component={FAQ} />
         <Route exact="true" path="/gallery" component={Gallery} />
-        <Route exact="true" component={Error} />
-
+          </>
+          }
+          else {
+              <Route exact="true" component={Error} />
+          }
       </Switch>
 
       {Boolean(authCtxt.authData) ? "" : <Footer />}
