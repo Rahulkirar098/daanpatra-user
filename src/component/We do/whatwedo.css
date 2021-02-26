@@ -39,6 +39,7 @@
     margin-left: 50px;
 }
 
+
 .Financial{
     width: 25%;
     margin-left: 80px;
@@ -49,7 +50,7 @@
     color: #CD9331;
 }
 .chart-digram{
-    width: 1000px;
+    width: 80%;
     margin-left: 10%;
 }
 @media screen and (max-width: 768px){
@@ -57,7 +58,7 @@
         width: 90%;
         margin: auto;
         height: 100%;
-        margin-top: 17%;
+        margin-top: 15vh;
         
     }
     .wedo-p{

@@ -21,22 +21,22 @@ const photos = [
         height: 4
       },
       {
-        src: img10,
+        src: img3,
         width: 4,
         height: 3
       },
       {
-        src: img10,
+        src: img4,
         width: 4,
         height: 3
       },
       {
-        src: img9,
+        src: img5,
         width: 4,
         height: 3
       },
       {
-        src: img10,
+        src: img6,
         width: 4,
         height: 3
       },

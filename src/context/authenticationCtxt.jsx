@@ -8,7 +8,7 @@ import React, {
   
   export const AuthenticationCtxtProvider = (props) => {
 
-    const [authData, setAuthData] = useState(undefined);
+    const [authData, setAuthData] = useState({phoneNo:undefined,token:undefined});
    const value = {authData,setAuthData};
   
     return (

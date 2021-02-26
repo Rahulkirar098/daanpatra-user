@@ -55,8 +55,10 @@ export default function SignIn() {
     if (display === dispalyshow) {
       signin(phoneNo, otp, (response) => {
         history.push("/dashbord");
-        authCtxt.setAuthData(response.User.Username);
+        console.log(response)
+        authCtxt.setAuthData({phoneNo:response.User.Username,token:response.User.access_token});
         localStorage.setItem("phoneNo", response.User.Username);
+        localStorage.setItem("token", response.User.access_token);
       });
     } else {
       otpGenerate(

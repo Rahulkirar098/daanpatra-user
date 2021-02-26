@@ -5,7 +5,7 @@ function Donate() {
 
 
     const [product_category, setProductCategory] = useState("")
-    const [quantity, setQuantity] = useState("")
+    const [quantity, setQuantity] = useState()
     const [pickup_time, setPickupTime] = useState("")
     const [pickup_date, setPickupDate] = useState("")
     const [pickup_address, setPickAddress] = useState("")
@@ -19,21 +19,18 @@ function Donate() {
         console.log({ product_category, quantity, pickup_time, pickup_date, pickup_address, product_description, images });
         let donateData = { product_category, quantity, pickup_time, pickup_date, pickup_address, product_description, images };
 
-
-        fetch("http://127.0.0.1:8000/admin/DaanpatraApp/donation/", {
-            method: 'OPTIONS',
+        fetch("http://127.0.0.1:8000/donation/", {
+            method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(donateData)
-        }).then((result) => {
+        }).then
+        ((result) => {
             console.log("result", result);
         })
-
     }
-
-
 
 
     return (
@@ -43,25 +40,29 @@ function Donate() {
 
             <form onSubmit={(d) => donatesubmit(d)}>
 
-                <select className="dashbord-select" value="product_category" onChange={(e) => {
-                    setProductCategory(e.target.value)
-                }}>
-                    <option>Choose your option</option>
-                    <option>Clothes</option>
-                    <option>Raw Food</option>
-                    <option>Utensils</option>
-                    <option>Equipments</option>
-                    <option>Books</option>
-                    <option>Un-Expired Medicines</option>
-                    <option>Other</option>
+                
+                <select className="dashbord-select"
+                name="category"  
+                id="asd"
+                value={product_category}
+                onChange={(e) => {setProductCategory(e.target.value)}}>
+
+
+                    <option value="Cloths" >Clothes</option>
+                    <option value="Raw Food" >Raw Food</option>
+                    <option value="Utensils" >Utensils</option>
+                    <option value="Equipments" >Equipments</option>
+                    <option value="Books" >Books</option>
+                    <option value="Other" >Other</option>
+
+
                 </select>
                 <br /><br />
-                <input className="dashbord-input" type="number" value={quantity} placeholder="Quantity" onChange={(e) => {
-                    setQuantity(e.target.value)
-                }} />
+                <input className="dashbord-input" type="number" value={quantity} placeholder="Quantity" 
+                onChange={(e) => {setQuantity(e.target.value)}} />
                 <br /><br />
-                <input className="dashbord-input" placeholder="Pick Up Time" value={pickup_time} type="time" required onChange={(e) => {
-                    setPickupTime(e.target.value)
+                <input className="dashbord-input" placeholder="Pick Up Time" value={pickup_time} type="time" required 
+                onChange={(e) => {setPickupTime(e.target.value)
                 }} />
                 <br /><br />
                 <input className="dashbord-input" placeholder="Pick Up Date" value={pickup_date} type="date" required onChange={(e) => {

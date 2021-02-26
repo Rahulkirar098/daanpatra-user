@@ -30,14 +30,14 @@ function App() {
   const [isNavOpen, setIsNavOpen] = useState(true);
   const authCtxt = useContext(AuthenticationCtxt);
 
-  useEffect(() => {
-    console.log(authCtxt.authData);
-  }, [authCtxt.authData]);
-
+  
+ useEffect(()=>{
   const phoneNo = localStorage.getItem("phoneNo");
+  const token = localStorage.getItem("token");
   if (phoneNo) {
-    authCtxt.setAuthData(phoneNo);
+    authCtxt.setAuthData({phoneNo,token});
   }
+   },[])
   return (
     <div>
 

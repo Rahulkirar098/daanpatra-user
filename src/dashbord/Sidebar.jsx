@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useContext, useState} from "react";
 import './sidebar.css'
 import Userprofile from '../assect/avatar.svg'
-import { Route, Switch } from 'react-router-dom';
+import { Route, useHistory } from 'react-router-dom';
 import { sidebardata } from "./sidebardata";
 import Certificate from "./Pages/Certificate";
 import Donate from "./Pages/Donate";
@@ -9,11 +9,23 @@ import Gallery from "../component/news gallary/Gallery";
 import Volunteer from "../component/volunteer/Volunteer";
 import FAQ from "../component/FAQ/FAQ";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { AuthenticationCtxt } from "../context/authenticationCtxt";
 
 
 
 
 const Sidebar = () => {
+
+    const history = useHistory();
+    const [refresh, setRefresh] = useState(true)
+    const authCtxt = useContext(AuthenticationCtxt);
+
+    const logout = () => {
+        localStorage.clear();
+        authCtxt.setAuthData(undefined);
+        history.push('/login')
+        setRefresh(false);
+    }
 
     return (
         <div className="dashbord-sidebar">
@@ -35,8 +47,8 @@ const Sidebar = () => {
                     })}
 
                     <li className="sidebarli"><div id="sideicon"><ExitToAppIcon /></div>
-                        <div id="sidetitle">Logout</div>
-                        </li>
+                        <div id="sidetitle" value={refresh} onClick={logout}>Logout</div>
+                    </li>
 
 
                 </ul>

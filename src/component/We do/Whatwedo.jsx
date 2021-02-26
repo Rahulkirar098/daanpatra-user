@@ -29,20 +29,20 @@ const WhatWeDo = () => {
                 <div className="wedo-pwf">
 
                     <div className="Hunger">
-                        <img src={Food} />
+                        <img src={Food} alt="Food"/>
                         <h2>Food</h2>
                         <p>We aim to redistribute surplus food to those who are in need of it. Please call our helpline, our volunteers will collect the excess food.</p>
                     </div>
 
                     <div className="Clothing">
-                    <img src={Cloths} />
+                    <img src={Cloths} alt="Cloths" />
 
                         <h2>Clothing</h2>
                         <p>while you have extra clothes, there is someone out there in the need of clothes care of others and DONATE NOW.</p>
                     </div>
 
                     <div className="Financial ">
-                    <img src={Applinces} />
+                    <img src={Applinces} alt="Applinces" />
                         <h2>Other</h2>
                         <p>Donate reusable items from the convenience of
 your house. Avail doorstep pickup and get your donations delivered to the ones in need.</p>
