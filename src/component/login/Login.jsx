@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "./login.css";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -9,7 +10,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
-import "./login.css";
 import { signin } from "../../config/ApiHandler";
 import { otpGenerate } from "../../config/ApiHandler";
 import Fade from "react-reveal/Fade";
@@ -55,15 +55,15 @@ export default function SignIn() {
     if (display === dispalyshow) {
       signin(phoneNo, otp, (response) => {
         history.push("/dashbord");
-        console.log(response)
-        authCtxt.setAuthData({phoneNo:response.User.Username,token:response.User.access_token});
+        authCtxt.setAuthData(response.User.Username);
         localStorage.setItem("phoneNo", response.User.Username);
-        localStorage.setItem("token", response.User.access_token);
+        localStorage.setItem("token", response.Data.token_type +" " + response.Data.access_token)
       });
     } else {
       otpGenerate(
         phoneNo,
         (response) => {
+          
           setDisplay(dispalyshow);
         },
         (error) => {

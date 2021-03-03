@@ -1,7 +1,7 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "./app.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 import Home from "./component/main body/home/home";
 import Footer from "./component/footer/Footer";
 import Contact from "./component/main body/contact/contact";
@@ -21,23 +21,22 @@ import FAQ from "./component/FAQ/FAQ";
 import Sidebar from "./dashbord/Sidebar";
 import {
   AuthenticationCtxt,
-  AuthenticationCtxtProvider,
 } from "./context/authenticationCtxt";
 
 function App() {
-  const location = useLocation();
-  const page = location.pathname.split("/");
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  // const location = useLocation();
+  // const page = location.pathname.split("/");
+  // const [isNavOpen, setIsNavOpen] = useState(true);
   const authCtxt = useContext(AuthenticationCtxt);
 
-  
- useEffect(()=>{
+  useEffect(() => {
+    // console.log(authCtxt.authData);
+  }, [authCtxt.authData]);
+
   const phoneNo = localStorage.getItem("phoneNo");
-  const token = localStorage.getItem("token");
   if (phoneNo) {
-    authCtxt.setAuthData({phoneNo,token});
+    authCtxt.setAuthData(phoneNo);
   }
-   },[])
   return (
     <div>
 

@@ -1,4 +1,4 @@
-import React,{useContext, useState} from "react";
+import React, { useContext} from "react";
 import './sidebar.css'
 import Userprofile from '../assect/avatar.svg'
 import { Route, useHistory } from 'react-router-dom';
@@ -15,24 +15,35 @@ import { AuthenticationCtxt } from "../context/authenticationCtxt";
 
 
 const Sidebar = () => {
-
     const history = useHistory();
-    const [refresh, setRefresh] = useState(true)
     const authCtxt = useContext(AuthenticationCtxt);
+
+    // const [data, setUserdata] = useState([])
 
     const logout = () => {
         localStorage.clear();
         authCtxt.setAuthData(undefined);
-        history.push('/login')
-        setRefresh(false);
+        history.push('/')
     }
+
+    
+    
+
+    // useEffect(() => {
+    //     fetch('http://127.0.0.1:8000/user-register/').then((result) => {
+    //         result.json().then((response) => {
+    //             setUserdata(response)
+    //         })
+    //     })
+    // }, [])
 
     return (
         <div className="dashbord-sidebar">
             <div className="sidebar">
                 <div className="Profile">
                     <img className="userprofile" src={Userprofile} alt="profile" />
-                    <h2>Rahul kirar</h2>
+                   <h2>Rahul</h2>
+
                 </div>
                 <ul className="sidebarmenu">
                     {sidebardata.map((val, key) => {
@@ -47,7 +58,7 @@ const Sidebar = () => {
                     })}
 
                     <li className="sidebarli"><div id="sideicon"><ExitToAppIcon /></div>
-                        <div id="sidetitle" value={refresh} onClick={logout}>Logout</div>
+                        <div id="sidetitle" onClick={logout}>Logout</div>
                     </li>
 
 

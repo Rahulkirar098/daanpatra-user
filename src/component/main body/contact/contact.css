@@ -7,13 +7,11 @@
 }
 .contact-left{
   width: 50%;
-  /* padding: 50px; */
-  /* border: 2px solid red; */
+  padding: 50px;
 }
 .contact-left img{
   width: 100%;
   margin-top: 5%;
-  /* border: 2px solid green; */
 }
 .contact-right{
   width: 50%;
@@ -55,7 +53,7 @@
 @media screen and (max-width:768px){
   .contact{
     display: block;
-    margin-top: 10vh;
+    margin-top: 0;
     
   }
   .contact-left{

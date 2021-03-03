@@ -12,18 +12,27 @@ function Donate() {
     const [product_description, setProductDescription] = useState("")
     const [images, setProductImage] = useState("")
 
+    const imagedata = (e) =>{
+    
+            setProductImage(e.target.files[0])
+
+            console.log(e.target.files[0])
+                    
+      }
 
 
-    const donatesubmit = (d) => {
+    const donatesubmit = async(d) => {
         d.preventDefault();
         console.log({ product_category, quantity, pickup_time, pickup_date, pickup_address, product_description, images });
         let donateData = { product_category, quantity, pickup_time, pickup_date, pickup_address, product_description, images };
-
+        let token = await localStorage.getItem("token");
         fetch("http://127.0.0.1:8000/donation/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
+                'Authorization': token,
+
             },
             body: JSON.stringify(donateData)
         }).then
@@ -77,9 +86,7 @@ function Donate() {
                     setProductDescription(e.target.value)
                 }} />
                 <br /><br />
-                <input type="file" value={images} onChange={(e) => {
-                    setProductImage(e.target.value)
-                }} />
+                <input type="file"  onChange={imagedata}/>
                 <br /><br />
                 <button className="dashbord-button-donate" type="submit">Submit</button>
 

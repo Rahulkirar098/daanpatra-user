@@ -114,6 +114,7 @@ export default function SignUp() {
                 onChange={(e) => setContact(e.target.value)}
               />
             </Grid>
+            
           </Grid>
           <Button
             fullWidth
