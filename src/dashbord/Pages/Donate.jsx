@@ -25,14 +25,15 @@ function Donate() {
         d.preventDefault();
         console.log({ product_category, quantity, pickup_time, pickup_date, pickup_address, product_description, images });
         let donateData = { product_category, quantity, pickup_time, pickup_date, pickup_address, product_description, images };
+      
         let token = await localStorage.getItem("token");
+       
         fetch("http://127.0.0.1:8000/donation/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': token,
-
             },
             body: JSON.stringify(donateData)
         }).then
@@ -41,7 +42,6 @@ function Donate() {
         })
     }
 
-
     return (
         <div className="donatedashbord">
 
@@ -49,21 +49,18 @@ function Donate() {
 
             <form onSubmit={(d) => donatesubmit(d)}>
 
-                
                 <select className="dashbord-select"
                 name="category"  
                 id="asd"
                 value={product_category}
                 onChange={(e) => {setProductCategory(e.target.value)}}>
 
-
-                    <option value="Cloths" >Clothes</option>
-                    <option value="Raw Food" >Raw Food</option>
-                    <option value="Utensils" >Utensils</option>
-                    <option value="Equipments" >Equipments</option>
-                    <option value="Books" >Books</option>
-                    <option value="Other" >Other</option>
-
+                    <option value="cloths" >Clothes</option>
+                    <option value="food" >Raw Food</option>
+                    <option value="utensils" >Utensils</option>
+                    <option value="equipments" >Equipments</option>
+                    <option value="books" >Books</option>
+                    <option value="other" >Other</option>
 
                 </select>
                 <br /><br />
