@@ -1,1 +1,1 @@
-export const apiUrl = "http://127.0.0.1:8000"; //for DEVELOPMENT
+export const apiUrl = "http://13.233.167.36:8000"; //for DEVELOPMENT

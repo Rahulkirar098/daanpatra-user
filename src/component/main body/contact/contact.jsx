@@ -13,12 +13,10 @@ const Contact = () => {
 
   const contactsubmit = (e) =>{
     e.preventDefault();
-    console.log("asdfgh")
-        console.log(first_name,last_name,email,contact_no,message);
         
         let data = {first_name,last_name,email,contact_no,message};
 
-        fetch("http://127.0.0.1:8000/contact/",{
+        fetch("http://13.233.167.36:8000/contact/",{
           method:'POST',
           headers:{
             'Accept':'application/json',
@@ -28,6 +26,13 @@ const Contact = () => {
         }).then((result)=>{
           console.log("result",result);
         })
+        setFristName("")
+        setLastName("")
+        setEmail("")
+        setContact_no("")
+        setMessage("")
+
+        alert("Your request is Submited")
       }
 
 

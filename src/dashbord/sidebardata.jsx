@@ -1,5 +1,5 @@
 import React from "react";
-import ImageIcon from '@material-ui/icons/Image';
+// import ImageIcon from '@material-ui/icons/Image';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 import ThumbsUpDownIcon from '@material-ui/icons/ThumbsUpDown';
@@ -12,11 +12,6 @@ export const sidebardata = [
         title:"Certificate",
         icon:<CardMembershipIcon />,
         link:"/certificate"
-    },
-    {
-        title:"Gallery",
-        icon:<ImageIcon />,
-        link:"/gallerys"
     },
     {
         title:"Donate",

@@ -36,6 +36,7 @@ const Sidebar = () => {
     //         })
     //     })
     // }, [])
+    
 
     return (
         <div className="dashbord-sidebar">
@@ -67,9 +68,9 @@ const Sidebar = () => {
             <div className="right-dashbord">
 
 
+                <Route exact="true" path="/donate" component={Donate} />     
                 <Route exact="true" path="/certificate" component={Certificate} />
                 <Route exact="true" path="/gallerys" component={Gallery} />
-                <Route exact="true" path="/donate" component={Donate} />
                 <Route exact="true" path="/volunteers" component={Volunteer} />
                 <Route exact="true" path="/faqs" component={FAQ} />
 

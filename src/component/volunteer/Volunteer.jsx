@@ -14,8 +14,8 @@ const Volunteer = () => {
         v.preventDefault();
 
         let volunteerdata = {full_name,email,contact_no,address};
-        
-        fetch("http://127.0.0.1:8000/volunteer/",{
+    console.log({full_name,email,contact_no,address})
+        fetch("http://13.233.167.36:8000/volunteer/",{
           method:'POST',
           headers:{
             'Accept':'application/json',
@@ -25,9 +25,14 @@ const Volunteer = () => {
         }).then((result)=>{
           console.log("result",result);
         })
+        setFullName("")
+        setEmail("")
+        setContact_no("")
+        setAddress("")
+      
+        alert("Your request is Submited")
 
-    }
-  
+      }
   
     return (
         <div className="volunteer">

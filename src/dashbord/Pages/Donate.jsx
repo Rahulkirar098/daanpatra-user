@@ -13,11 +13,8 @@ function Donate() {
     const [images, setProductImage] = useState("")
 
     const imagedata = (e) =>{
-    
             setProductImage(e.target.files[0])
-
             console.log(e.target.files[0])
-                    
       }
 
 
@@ -28,7 +25,7 @@ function Donate() {
       
         let token = await localStorage.getItem("token");
        
-        fetch("http://127.0.0.1:8000/donation/", {
+        fetch("http://13.233.167.36:8000/donation/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
