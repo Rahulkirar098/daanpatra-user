@@ -16,7 +16,7 @@ const Contact = () => {
         
         let data = {first_name,last_name,email,contact_no,message};
 
-        fetch("http://13.233.167.36:8000/contact/",{
+        fetch("http://65.1.100.59:8000/contact/",{
           method:'POST',
           headers:{
             'Accept':'application/json',

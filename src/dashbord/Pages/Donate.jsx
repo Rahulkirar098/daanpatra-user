@@ -25,7 +25,7 @@ function Donate() {
       
         let token = await localStorage.getItem("token");
        
-        fetch("http://13.233.167.36:8000/donation/", {
+        fetch("http://65.1.100.59:8000/donation/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

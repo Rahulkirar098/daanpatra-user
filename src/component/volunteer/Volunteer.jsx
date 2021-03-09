@@ -15,7 +15,7 @@ const Volunteer = () => {
 
         let volunteerdata = {full_name,email,contact_no,address};
     console.log({full_name,email,contact_no,address})
-        fetch("http://13.233.167.36:8000/volunteer/",{
+        fetch("http://65.1.100.59:8000/volunteer/",{
           method:'POST',
           headers:{
             'Accept':'application/json',

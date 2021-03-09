@@ -49,7 +49,7 @@ export default function SignUp() {
         
         let data = {first_name,last_name,contact};
 
-        fetch("http://13.233.167.36:8000/user-register/",{
+        fetch("http://65.1.100.59:8000/user-register/",{
           method:'POST',
           headers:{
             'Accept':'application/json',
