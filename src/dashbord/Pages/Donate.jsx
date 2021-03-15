@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./donate.css";
 
+
 function Donate() {
 
 
@@ -15,8 +16,7 @@ function Donate() {
     const imagedata = (e) =>{
             setProductImage(e.target.files[0])
             console.log(e.target.files[0])
-      }
-
+      }        
 
     const donatesubmit = async(d) => {
         d.preventDefault();
@@ -25,7 +25,7 @@ function Donate() {
       
         let token = await localStorage.getItem("token");
        
-        fetch("http://65.1.100.59:8000/donation/", {
+        fetch("http://13.126.128.217/donation/", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

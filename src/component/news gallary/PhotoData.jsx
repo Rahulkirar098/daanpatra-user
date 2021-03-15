@@ -17,48 +17,198 @@ const photos = [
       },
       {
         src: img2,
-        width: 4,
-        height: 4
+        width: 5,
+        height: 3
       },
       {
         src: img3,
-        width: 4,
+        width: 5,
         height: 3
       },
       {
         src: img4,
-        width: 4,
+        width: 5,
         height: 3
       },
       {
         src: img5,
-        width: 4,
+        width: 5,
         height: 3
       },
       {
         src: img6,
-        width: 4,
+        width: 5,
         height: 3
       },
       {
         src: img7,
-        width: 4,
+        width: 5,
         height: 3
       },
       {
         src: img8,
-        width: 4,
+        width: 5,
         height: 3
       },
       {
         src: img9,
-        width: 4,
+        width: 5,
         height: 3
       },
       {
         src: img10,
-        width: 4,
+        width: 5,
         height: 3
       },
+      {
+        src: img1,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img2,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img3,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img4,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img5,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img6,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img7,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img8,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img9,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img10,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img1,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img2,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img3,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img4,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img5,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img6,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img7,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img8,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img9,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img10,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img1,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img2,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img3,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img4,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img5,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img6,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img7,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img8,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img9,
+        width: 5,
+        height: 3
+      },
+      {
+        src: img10,
+        width: 5,
+        height: 3
+      }
 ]
 export default photos;

@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import './volunteer.css';
 import VolunteerGif from "../../assect/volunteer.gif";
+import swal from "sweetalert";
+
 
 
 
@@ -15,7 +17,7 @@ const Volunteer = () => {
 
         let volunteerdata = {full_name,email,contact_no,address};
     console.log({full_name,email,contact_no,address})
-        fetch("http://65.1.100.59:8000/volunteer/",{
+        fetch("http://13.126.128.217/volunteer/",{
           method:'POST',
           headers:{
             'Accept':'application/json',
@@ -30,10 +32,10 @@ const Volunteer = () => {
         setContact_no("")
         setAddress("")
       
-        alert("Your request is Submited")
+        swal("Good job!", "You Are Done!", "success");
 
       }
-  
+        
     return (
         <div className="volunteer">
 

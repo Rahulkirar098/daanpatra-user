@@ -11,22 +11,19 @@ export default () => (
     <div className="carouselcss" >
     <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} dynamicHeight={false}>
         <div >
-            <img className="carousel_img" alt="" src={slide3} />
-            {/* <Slide bottom><p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p></Slide> */}
+            <img className="carousel_img" alt="Topslide" src={slide3} />
         </div>
         <div >
-            <img className="carousel_img" alt="" src={slide2} />
-            {/* <p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p> */}
+            <img className="carousel_img" alt="Topslide" src={slide2} />
         </div>
         <div >
-            <img className="carousel_img" alt="" src={slide1} />
-            {/* <p className="legend">Daanpatra Foundation is not-for-profit organisation headquartered in indore</p> */}
+            <img className="carousel_img" alt="Topslide" src={slide1} />
         </div>
         <div >
-            <img className="carousel_img" alt="" src={slide4} />
+            <img className="carousel_img" alt="Topslide" src={slide4} />
         </div>
         <div >
-            <img className="carousel_img" alt="" src={slide5} />
+            <img className="carousel_img" alt="Topslide" src={slide5} />
         </div>
         
     </Carousel>

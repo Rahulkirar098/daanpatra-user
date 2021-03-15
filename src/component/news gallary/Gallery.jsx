@@ -24,15 +24,7 @@ function Stuck() {
 
   return (
     <>
-        {/* <button className="gallery-btn" onClick={()=>{
-          setShow(!show)
-        }}>Press</button>
-        {
-          show?<Fade top><div className="news-gallary">
-
-
-</div></Fade>:null
-        } */}
+       
 <div className="news-gallary">
         <Gallery photos={photos} onClick={openLightbox}  />
 <ModalGateway >

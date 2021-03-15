@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./contact.css";
 import ContactImage from "../../../assect/Contact.gif";
+import swal from "sweetalert";
 
 const Contact = () => {
 
@@ -16,7 +17,7 @@ const Contact = () => {
         
         let data = {first_name,last_name,email,contact_no,message};
 
-        fetch("http://65.1.100.59:8000/contact/",{
+        fetch("http://13.126.128.217/contact/",{
           method:'POST',
           headers:{
             'Accept':'application/json',
@@ -31,8 +32,9 @@ const Contact = () => {
         setEmail("")
         setContact_no("")
         setMessage("")
+        
+        swal("Good job!", "You Are Done!", "success");
 
-        alert("Your request is Submited")
       }
 
 
@@ -46,7 +48,6 @@ const Contact = () => {
 
         <div className="contact-right">
         
-
         <form onSubmit={(e) => contactsubmit(e)} >
 
           <input className="input-name" placeholder="Frist Name" value={first_name} onChange={(e)=>{

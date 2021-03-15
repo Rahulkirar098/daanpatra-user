@@ -11,9 +11,6 @@ import FAQ from "../component/FAQ/FAQ";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { AuthenticationCtxt } from "../context/authenticationCtxt";
 
-
-
-
 const Sidebar = () => {
     const history = useHistory();
     const authCtxt = useContext(AuthenticationCtxt);
@@ -25,17 +22,6 @@ const Sidebar = () => {
         authCtxt.setAuthData(undefined);
         history.push('/')
     }
-
-    
-    
-
-    // useEffect(() => {
-    //     fetch('http://127.0.0.1:8000/user-register/').then((result) => {
-    //         result.json().then((response) => {
-    //             setUserdata(response)
-    //         })
-    //     })
-    // }, [])
     
 
     return (

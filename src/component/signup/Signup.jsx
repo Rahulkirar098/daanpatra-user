@@ -8,9 +8,10 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 import "./signup.css";
 import Fade from "react-reveal/Fade";
+import swal from "sweetalert";
 
 
 
@@ -41,15 +42,14 @@ export default function SignUp() {
   const[first_name,setFristName] = useState('');
   const[last_name,setLastName] = useState('');
   const[contact,setContact] = useState('');
+  const [asd, setAsd] = useState( <Link to="login" />)
 
   const signUp = () =>{
 
-        console.log(first_name,last_name,contact);
-        console.log("create")
         
         let data = {first_name,last_name,contact};
 
-        fetch("http://65.1.100.59:8000/user-register/",{
+        fetch("http://13.126.128.217/user-register/",{
           method:'POST',
           headers:{
             'Accept':'application/json',
@@ -59,8 +59,10 @@ export default function SignUp() {
         }).then((result)=>{
           console.log("result",result);
         })
-      }
+        // console.log(data)
+        swal("Good job!", "You Register!", "success");
 
+      }
 
 
  
